@@ -1,0 +1,6 @@
+[submodule "repo/service.kodi.tts"]
+	branch = v2.0.3-alpha
+	url = https://github.com/fbacher/service.kodi.tts
+[submodule "repo/script.module.langcodes"]
+	path = repo/script.module.langcodes
+	url = https://github.com/fbacher/script.module.langcodes
