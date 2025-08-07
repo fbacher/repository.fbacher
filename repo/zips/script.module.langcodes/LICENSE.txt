@@ -1,0 +1,1 @@
+See resources/lib/langcodes/LICENSE.txt and resources/lib/marisa_trie/LICENSE
