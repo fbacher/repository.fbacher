@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="fbacher.develop" name="fbacher.github.io" version="1.0.0~alpha" provider-name="fbacher">
+   <extension point="xbmc.addon.repository" name="fbacher's Kodi Pre-Release Repository">
+      <dir>
+         <info compressed="false">
+            https://raw.githubusercontent.com/fbacher/fbacher-kodi-repo/master/repo/zips/addons.xml
+         </info>
+         <checksum>
+            https://raw.githubusercontent.com/fbacher/fbacher-kodi-repo/master/repo/zips/addons.xml.md5
+         </checksum>
+         <datadir zip="true">https://raw.githubusercontent.com/fbacher/fbacher-kodi-repo/master/repo/zips/
+         </datadir>
+      </dir>
+   </extension>
+   <extension point="xbmc.addon.metadata">
+      <summary>fbacher-kodi-repo</summary>
+      <description>Repo for pre-release Kodi addon projects and needed dependencies</description>
+      <disclaimer></disclaimer>
+      <platform>linux windows-x86_64</platform>
+      <assets>
+         <icon>icon.png</icon>
+         <fanart>fanart.jpg</fanart>
+      </assets>
+   </extension>
+</addon>
