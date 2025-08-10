@@ -1,4 +1,3 @@
 # fbacher Kodi TTS Alpha Repository
 
-Kodi TTS and dependent Source:
-https://fbacher.github.io/fbacher-kodi-repo/
+To Install Kodi TTS and dependencies see: https://fbacher.github.io/fbacher-kodi-repo/README_INSTALL

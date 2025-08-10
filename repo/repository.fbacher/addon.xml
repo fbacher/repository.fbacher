@@ -6,9 +6,9 @@
             https://raw.githubusercontent.com/fbacher/fbacher-kodi-repo/master/docs/repo/zips/addons.xml
          </info>
          <checksum>
-            https://raw.githubusercontent.com/fbacher/fbacher-kodi-repo/master/repo/zips/addons.xml.md5
+            https://raw.githubusercontent.com/fbacher/fbacher-kodi-repo/master/docs/repo/zips/addons.xml.md5
          </checksum>
-         <datadir zip="true">https://raw.githubusercontent.com/fbacher/fbacher-kodi-repo/master/repo/zips/
+         <datadir zip="true">https://raw.githubusercontent.com/fbacher/fbacher-kodi-repo/master/docs/repo/zips/
          </datadir>
       </dir>
    </extension>
