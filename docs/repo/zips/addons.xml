@@ -3,12 +3,13 @@
    <extension point="xbmc.addon.repository" name="fbacher Kodi Pre-Release Repository">
       <dir>
          <info compressed="false">
-            https://fbacher.github.io/fbacher-kodi-repo/repo/zips/addons.xml
+            https://raw.githubusercontent.com/fbacher/fbacher-kodi-repo/master/docs/repo/zips/addons.xml
          </info>
+         <hashes>md5</hashes>
          <checksum>
-            https://fbacher.github.io/fbacher-kodi-repo/repo/zips/addons.xml.md5
+            https://raw.githubusercontent.com/fbacher/fbacher-kodi-repo/master/docs/repo/zips/addons.xml.md5
          </checksum>
-         <datadir zip="true">https://fbacher.github.io/fbacher-kodi-repo/repo/zips/
+         <datadir zip="true">https://raw.githubusercontent.com/fbacher/fbacher-kodi-repo/master/docs/repo/zips/
          </datadir>
       </dir>
    </extension>

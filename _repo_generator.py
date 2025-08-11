@@ -2,7 +2,7 @@
 """
     Put this script in the root folder of your repo and it will
     zip up all addon folders, create a new zip in your zips folder
-    and then update the md5 and addons.xml file
+    and then update the sha256 and addons.xml file
 """
 
 import hashlib
@@ -138,7 +138,7 @@ def convert_bytes(num):
 class Generator:
     """
     Generates a new addons.xml file from each addons addon.xml file
-    and a new addons.xml.md5 hash file. Must be run from the root of
+    and a new addons.xml.sha256 hash file. Must be run from the root of
     the checked-out repo.
     """
 
@@ -147,7 +147,7 @@ class Generator:
         self.docs_path: Path = Path('docs') / self.release_path
         self.zips_path: Path = self.docs_path / "zips"
         addons_xml_path: Path = self.zips_path / "addons.xml"
-        md5_path: Path = self.zips_path / "addons.xml.md5"
+        sha256_path: Path = self.zips_path / "addons.xml.md5"
 
         self.zips_path.mkdir(parents=True, exist_ok=True)
 
@@ -158,8 +158,8 @@ class Generator:
                 "Successfully updated {}".format(color_text(addons_xml_path, 'yellow'))
             )
 
-            if self._generate_md5_file(addons_xml_path, md5_path):
-                print("Successfully updated {}".format(color_text(md5_path, 'yellow')))
+            if self._generate_sha256_file(addons_xml_path, sha256_path):
+                print(f"Successfully updated {color_text(sha256_path, 'yellow')}")
 
     def _remove_binaries(self):
         """
@@ -342,18 +342,19 @@ class Generator:
                       f"{color_text(addons_xml_path, 'yellow')}!\n"
                       f"{color_text(e, 'red')}")
 
-    def _generate_md5_file(self, addons_xml_path: Path, md5_path: Path):
+    def _generate_sha256_file(self, addons_xml_path: Path, sha256_path: Path):
         """
-        Generates a new addons.xml.md5 file.
+        Generates a new addons.xml.sha256 file.
         """
         try:
             with addons_xml_path.open("r", encoding="utf-8") as f:
+                # m = hashlib.sha256(f.read().encode("utf-8")).hexdigest()
                 m = hashlib.md5(f.read().encode("utf-8")).hexdigest()
-                self._save_file(m, file=md5_path)
+                self._save_file(m, file=sha256_path)
 
             return True
         except Exception as e:
-            print(f"An error occurred updating {color_text(md5_path, 'yellow')}!\n"
+            print(f"An error occurred updating {color_text(sha256_path, 'yellow')}!\n"
                   f"{color_text(e, 'red')}")
 
     def _save_file(self, data, file: Path):
