@@ -144,7 +144,7 @@ class Generator:
 
     def __init__(self, release: Path):
         self.release_path: Path = release
-        self.docs_path: Path = Path('docs') / self.release_path
+        self.docs_path: Path = self.release_path
         self.zips_path: Path = self.docs_path / "zips"
         addons_xml_path: Path = self.zips_path / "addons.xml"
         sha256_path: Path = self.zips_path / "addons.xml.md5"
