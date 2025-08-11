@@ -1,14 +1,14 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <addons><addon id="fbacher.develop" name="fbacher.develop" version="1.0.0~alpha" provider-name="fbacher">
    <extension point="xbmc.addon.repository" name="fbacher's Kodi Pre-Release Repository">
       <dir>
          <info compressed="false">
-            https://raw.githubusercontent.com/fbacher/fbacher-kodi-repo/master/docs/repo/zips/addons.xml
+            https://fbacher.github.io/fbacher-kodi-repo/repo/zips/addons.xml
          </info>
          <checksum>
-            https://raw.githubusercontent.com/fbacher/fbacher-kodi-repo/master/docs/repo/zips/addons.xml.md5
+            https://fbacher.github.io/fbacher-kodi-repo/repo/zips/addons.xml.md5
          </checksum>
-         <datadir zip="true">https://raw.githubusercontent.com/fbacher/fbacher-kodi-repo/master/docs/repo/zips/
+         <datadir zip="true">https://fbacher.github.io/fbacher-kodi-repo/repo/zips/
          </datadir>
       </dir>
    </extension>
