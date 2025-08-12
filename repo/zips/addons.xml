@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version='1.0' encoding='UTF-8'?>
 <addons><addon id="repository.fbacher" name="fbacher Pre-Release Repository" version="1.0.0" provider-name="fbacher">
    <extension point="xbmc.addon.repository" name="fbacher Pre-Release Repository">
       <dir>
