@@ -6,10 +6,10 @@
             https://fbacher.github.io/repository.fbacher/repo/zips/addons.xml
          </info>
          <hashes>false</hashes>
-         <!-- <checksum>
-            https://raw.githubusercontent.com/fbacher/fbacher-kodi-repo/master/repo/zips/addons.xml.md5
-         </checksum>  -->
-         <datadir zip="true">https://fbacher.github.io/repository.fbacher/repo/zips/
+         <checksum>
+            https://fbacher.github.io/repository.fbacher/repo/zips/addons.xml.md5
+         </checksum>
+         <datadir>https://fbacher.github.io/repository.fbacher/repo/zips/
          </datadir>
       </dir>
    </extension>
@@ -17,7 +17,7 @@
       <summary>fbacher Pre-Release Repository</summary>
       <description>Repo for pre-release Kodi addon projects and needed dependencies</description>
       <disclaimer></disclaimer>
-      <platform>linux windows-x86_64</platform>
+      <platform>all</platform>
       <assets>
          <icon>icon.png</icon>
          <fanart>fanart.jpg</fanart>
