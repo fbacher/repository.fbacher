@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # coding=utf-8
 """
     Put this script in the root folder of your repo and it will
@@ -147,7 +148,9 @@ class Generator:
         self.docs_path: Path = self.release_path
         self.zips_path: Path = self.docs_path / "zips"
         addons_xml_path: Path = self.zips_path / "addons.xml"
-        sha256_path: Path = self.zips_path / "addons.xml.md5"
+        sha256_path: Path = self.zips_path / "addons.xml.sha256"
+        md5_path: Path = self.zips_path / "addons.xml.md5"
+        hash_path: Path = md5_path
 
         self.zips_path.mkdir(parents=True, exist_ok=True)
 
@@ -158,8 +161,8 @@ class Generator:
                 "Successfully updated {}".format(color_text(addons_xml_path, 'yellow'))
             )
 
-            if self._generate_sha256_file(addons_xml_path, sha256_path):
-                print(f"Successfully updated {color_text(sha256_path, 'yellow')}")
+            if self._generate_sha256_file(addons_xml_path, hash_path):
+                print(f"Successfully updated {color_text(hash_path, 'yellow')}")
 
     def _remove_binaries(self):
         """
@@ -342,28 +345,30 @@ class Generator:
                       f"{color_text(addons_xml_path, 'yellow')}!\n"
                       f"{color_text(e, 'red')}")
 
-    def _generate_sha256_file(self, addons_xml_path: Path, sha256_path: Path):
+    def _generate_sha256_file(self, addons_xml_path: Path, hash_path: Path):
         """
         Generates a new addons.xml.sha256 file.
         """
         try:
             with addons_xml_path.open("r", encoding="utf-8") as f:
-                # m = hashlib.sha256(f.read().encode("utf-8")).hexdigest()
-                m = hashlib.md5(f.read().encode("utf-8")).hexdigest()
-                self._save_file(m, file=sha256_path)
+                # digest = hashlib.sha256(f.read().encode("utf-8")).hexdigest()
+                digest = hashlib.md5(f.read().encode("utf-8")).hexdigest()
+                self._save_file(digest, file=hash_path)
 
             return True
         except Exception as e:
-            print(f"An error occurred updating {color_text(sha256_path, 'yellow')}!\n"
+            print(f"An error occurred updating {color_text(hash_path, 'yellow')}!\n"
                   f"{color_text(e, 'red')}")
 
-    def _save_file(self, data, file: Path):
+    def _save_file(self, digest, file: Path):
         """
         Saves a file.
         """
+        is_binary: bool = True
+        binary_marker = '*' if is_binary else ' '
         try:
-            with file.open("w") as f:
-                f.write(data)
+            with file.open('w', newline='\n') as sig:
+                sig.write(f'{digest} {"*"}\n')
         except Exception as e:
             print(f"An error occurred saving {color_text(file, 'yellow')}!\n"
                   f"{color_text(e, 'red')}")
