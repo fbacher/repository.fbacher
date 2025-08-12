@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="fbacher.develop" name="fbacher Pre-Release Repository" version="1.0.0~alpha" provider-name="fbacher">
+<addon id="repository.fbacher" name="fbacher Pre-Release Repository" version="1.0.0~alpha" provider-name="fbacher">
    <extension point="xbmc.addon.repository" name="fbacher Pre-Release Repository">
       <dir>
          <info compressed="false">
