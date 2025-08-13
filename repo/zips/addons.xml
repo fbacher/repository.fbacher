@@ -7,7 +7,10 @@
          <info compressed="false">
             https://raw.githubusercontent.com/fbacher/repository.fbacher/master/repo/zips/addons.xml
          </info>
-          
+
+         <checksum>
+            https://raw.githubusercontent.com/fbacher/repository.fbacher/master/repo/zips/addons.xml.md5
+         </checksum>
          
          <hashes>false</hashes>
          <datadir zip="true">
@@ -25,7 +28,7 @@
          <fanart>fanart.jpg</fanart>
       </assets>
    </extension>
-</addon><addon id="script.module.langcodes" name="Python langcodes and language_data" version="3.4.0~alpha" provider-name="Frank Feuerbacher (fbacher)">
+</addon><addon id="script.module.langcodes" name="Python langcodes and language_data" version="3.4.0" provider-name="Frank Feuerbacher (fbacher)">
   <debugging>true</debugging>
   <requires>
     <import addon="xbmc.python" version="3.0.1" />
@@ -48,14 +51,14 @@
     <platform>all</platform>
     <license> MIT License (langcodes and marisa_trie)</license>
   </extension>
-</addon><addon id="service.kodi.tts" name="Kodi Screen Reader" version="2.0.7~alpha" provider-name="Frank Feuerbacher (fbacher), Rick Phillips (ruuk), pvagner">
+</addon><addon id="service.kodi.tts" name="Kodi Screen Reader" version="2.0.7" provider-name="Frank Feuerbacher (fbacher), Rick Phillips (ruuk), pvagner">
    <debugging>true</debugging>
    <requires>
       <import addon="xbmc.python" version="3.0.1" />
       <import addon="xbmc.addon" version="20.0.0" />
       <import addon="script.module.pydevd" version="4.4.0" optional="true" />
       <import addon="script.module.six" version="1.16.0+matrix.1" />
-      <import addon="script.module.langcodes" version="3.4.0~alpha" />
+      <import addon="script.module.langcodes" version="3.4.0" />
       <import addon="script.module.requests" version="2.31.0" />
       <import addon="script.module.typing_extensions" version="4.7.1" />
    </requires>
