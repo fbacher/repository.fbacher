@@ -13,8 +13,8 @@ using unauthorized repositories.
 
 ### To Use the Repository
 
-First download the TTS Repository addon's 
-[.zip file](./repo/zips/repository.fbacher/repository.fbacher-1.0.0.zip)
+First download the TTS Repository addon's .zip file 
+[from here](./repo/zips/repo.fbacher/repo.fbacher-1.0.0.zip)
  
 Next, install the repository as you would any Kodi Addon:
 
