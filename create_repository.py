@@ -69,6 +69,7 @@ import tempfile
 import threading
 import xml.etree.ElementTree
 import zipfile
+from pathlib import Path
 from typing import Any, Dict, List
 
 AddonMetadata = collections.namedtuple(
@@ -343,11 +344,12 @@ def get_addon_worker(addon_location, target_folder):
 def create_repository(
         addon_locations,
         data_path,
-        info_path,
+        info_path: Path,
         checksum_path,
         is_compressed,
         no_parallel):
     # Import git lazily.
+    print(f'In create_repository')
     if any(is_url(addon_location) for addon_location in addon_locations):
         try:
             global git
@@ -386,14 +388,24 @@ def create_repository(
                 raise result.exc_info[1]
             metadata.append(result.addon_metadata)
 
-    # Generate the addons.xml file.
+    #
+    # Create the xml to write to addons.xml OR addons.xml.gz
     root = xml.etree.ElementTree.Element('addons')
     for addon_metadata in metadata:
         root.append(addon_metadata.root)
     tree = xml.etree.ElementTree.ElementTree(root)
-    info_file = gzip.open(info_path, 'wb')
-    with info_file:
-        tree.write(info_file, encoding='UTF-8', xml_declaration=True)
+    create_addons_xml: bool = True
+    print(f'info_path: {info_path}')
+    if info_path.suffix != '.gz' and create_addons_xml:
+        with info_path.open('wb') as f:
+            tree.write(f, encoding='UTF-8', xml_declaration=True)
+    create_addons_gz: bool = True
+    if not info_path.exists() and info_path.suffix == '.gz' and create_addons_gz:
+        info_file = gzip.open(info_path, 'wb')
+        print(f'zipping {info_path}')
+        with info_file:
+            tree.write(info_file, encoding='UTF-8',
+                       xml_declaration=True)
 
     generate_checksum(info_path, hash_type='md5')
     #  generate_checksum(archive_path=checksum_path, hash_type='md5')
@@ -436,22 +448,29 @@ def main():
                 format REPOSITORY_URL#BRANCH:PATH''')
     args = parser.parse_args()
 
-    data_path = os.path.expanduser(args.datadir)
+    #  Data dir is where the .zip dir
+    data_path: Path = Path(args.datadir).expanduser()
+    #  The info element holds the path to addons.xml.zip inside of .zips
     if args.info is None:
-        if args.compressed:
+        if args.compressed:  # Pre-generate the addons.xml.gz
             info_basename = 'addons.xml.gz'
         else:
-            info_basename = 'addons.xml'
-        info_path = os.path.join(data_path, info_basename)
+            info_basename = 'addons.xml'  # Let the web server gzip it if it likes
+        # Path to the info (addons.xml) inside of data (zips) directory.
+        addons_path: Path = data_path / info_basename
     else:
-        info_path = os.path.expanduser(args.info)
+        addons_path: Path = Path(args.info).expanduser()
+    # checksum path is the path to the addons.xml.md5 or addons.xml.gzip.md5 that
+    # is used as a digest to tell if the addons.xml (or addons.xml.gz) has changed
+    # os.path.expanduser expands any leading "~" or "~user" into the respective
+    # User's path.
     checksum_path = (
         os.path.expanduser(args.checksum) if args.checksum is not None
-        else info_path)
+        else addons_path)
     create_repository(
         args.addon,
-        data_path,
-        info_path,
+        data_path,   #  Data dir is where the .zipped up code is
+        addons_path,   #
         checksum_path,
         args.compressed,
         args.no_parallel)

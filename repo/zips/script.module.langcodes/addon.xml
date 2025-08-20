@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="script.module.langcodes"
        name="Python langcodes and language_data"
-       version="3.4.0"
+       version="3.4.0~alpha"
        provider-name="Frank Feuerbacher (fbacher)">
   <debugging>true</debugging>
   <requires>

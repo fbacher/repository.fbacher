@@ -1,16 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <addons><addon id="repo.fbacher" name="fbacher Repository" version="1.0.0" provider-name="fbacher">
-   <requires>
-      
-   </requires>
    <extension point="xbmc.addon.repository" name="fbacher Repository">
       <dir minversion="20.0.0">
          
-         <info compressed="false">http://smeagol/repository.fbacher/repo/zips/addons.xml.gz</info>
          
-         <checksum verify="md5">http://smeagol/repository.fbacher/repo/zips/addons.xml.gz.md5</checksum>
-         <datadir zip="true">http://smeagol/repository.fbacher/repo/zips/</datadir>
-         <hashes>sha256</hashes>
+         <info compressed="false">https://fbacher.github.io/repository.fbacher/repo/zips/addons.xml.gz</info>
+         
+         <checksum verify="md5">https://fbacher.github.io/repository.fbacher/repo/zips/addons.xml.gz.md5</checksum>
+         <datadir zip="true">https://fbacher.github.io/repository.fbacher/repo/zips/</datadir>
+         <hashes>sha256</hashes>  
       </dir>
       
    </extension>

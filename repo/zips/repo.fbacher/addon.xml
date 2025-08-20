@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="repo.fbacher" name="fbacher Repository" version="1.0.0"
        provider-name="fbacher">
-   <requires>
-      <!-- <import addon="xbmc.addon" version="20.0.0"/> -->
-   </requires>
    <extension point="xbmc.addon.repository" name="fbacher Repository">
       <dir minversion="20.0.0">
          <!-- DO NOT add extra whitespace to the element or attribute values. -->
-         <info compressed="false">http://smeagol/repository.fbacher/repo/zips/addons.xml.gz</info>
+         <!-- The only valid hash-values are: md5, sha256, sha512, sha1 (also true and false). Invalid
+              values cause Kodi to core dump. -->
+         <info compressed="false">https://fbacher.github.io/repository.fbacher/repo/zips/addons.xml.gz</info>
          <!-- Without the verify attribute, no validation of the hash is made.
               Also, the hash is performed on the addons.xml.gz file. You can put the hahs
               in the following line in either addons.xml.gz.md5 or addons.xml.md5. The file name
               is not paid much attention to (not tested).-->
-         <checksum verify="md5">http://smeagol/repository.fbacher/repo/zips/addons.xml.gz.md5</checksum>
-         <datadir zip="true">http://smeagol/repository.fbacher/repo/zips/</datadir>
-         <hashes>sha256</hashes>
+         <checksum verify="md5">https://fbacher.github.io/repository.fbacher/repo/zips/addons.xml.gz.md5</checksum>
+         <datadir zip="true">https://fbacher.github.io/repository.fbacher/repo/zips/</datadir>
+         <hashes>sha256</hashes>  <!-- Hash code to use for the datadir -->
       </dir>
       <!-- <dir>
          <info compressed="false">
