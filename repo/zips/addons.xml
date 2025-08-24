@@ -4,10 +4,10 @@
       <dir minversion="20.0.0">
          
          
-         <info compressed="false">https://fbacher.github.io/repository.fbacher/repo/zips/addons.xml.gz</info>
+         <info compressed="false">https://feuerbacher.us/repository.fbacher/repo/zips/addons.xml.gz</info>
          
-         <checksum verify="md5">https://fbacher.github.io/repository.fbacher/repo/zips/addons.xml.gz.md5</checksum>
-         <datadir zip="true">https://fbacher.github.io/repository.fbacher/repo/zips/</datadir>
+         <checksum verify="md5">https://feuerbacher.us/repository.fbacher/repo/zips/addons.xml.gz.md5</checksum>
+         <datadir zip="true">https://feuerbacher.us/repository.fbacher/repo/zips/</datadir>
          <hashes>sha256</hashes>  
       </dir>
       
