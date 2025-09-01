@@ -1,0 +1,9 @@
+---
+layout: home
+title: README
+---
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+# fbacher Kodi TTS Alpha Repository
+
+To Install Kodi TTS and dependencies see: [INSTALL_WINDOWS](URL_INSTALL_WINDOWS) or 
+[INSTALL_LINUX](URL_INSTALL_LINUX)

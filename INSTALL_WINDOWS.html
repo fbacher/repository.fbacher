@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>fbacher’s Kodi Development Repo | Private Kodi addon repository to simplify the installation and update of addons I am developing as well as some dependencies. Systems using the repository will be aware of changes made to the repository, such as updates.</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="fbacher’s Kodi Development Repo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Private Kodi addon repository to simplify the installation and update of addons I am developing as well as some dependencies. Systems using the repository will be aware of changes made to the repository, such as updates." />
+<meta property="og:description" content="Private Kodi addon repository to simplify the installation and update of addons I am developing as well as some dependencies. Systems using the repository will be aware of changes made to the repository, such as updates." />
+<link rel="canonical" href="http://smeagol/repository.fbacher/INSTALL_WINDOWS.html" />
+<meta property="og:url" content="http://smeagol/repository.fbacher/INSTALL_WINDOWS.html" />
+<meta property="og:site_name" content="fbacher’s Kodi Development Repo" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="fbacher’s Kodi Development Repo" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Private Kodi addon repository to simplify the installation and update of addons I am developing as well as some dependencies. Systems using the repository will be aware of changes made to the repository, such as updates.","headline":"fbacher’s Kodi Development Repo","url":"http://smeagol/repository.fbacher/INSTALL_WINDOWS.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://smeagol/feed.xml" title="fbacher&apos;s Kodi Development Repo" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">fbacher&#39;s Kodi Development Repo</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/repository.fbacher/repo/script.module.langcodes/README.html">langcodes/README</a><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title"></h1>
+  </header>
+
+  <div class="post-content">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<h1 id="install-kodi-tts-on-windows">Install Kodi TTS on Windows</h1>
+
+<p>Prerequites:</p>
+
+<p>** Windows 11 (may work on other versions, untested) **
+** Kodi 20 (Nexus) or Kodi 21 (Omega) (preferred) **</p>
+
+<h4 id="optionally-install-mpv">Optionally install mpv</h4>
+
+<p><strong>Recommended, but optional</strong>: install mpv player prior to Kodi TTS addon so that GooglTTS and
+Navigator voices will be available during initial configuration.</p>
+
+<p>The official <a href="https://mpv.io/installation/">mpv development site</a> does not produce builds,
+however, you can get a recent build from one of <a href="https://nightly.link/mpv-player/mpv/workflows/build/master">their recommended sites</a>.
+Despite being a daily build, they are generally appropriate for general use. Look for a build which
+is appropriate for your platform, one with <a href="https://nightly.link/mpv-player/mpv/workflows/build/master/mpv-x86_64-pc-windows-msvc">“mpv-x86_64” in it, such as:</a></p>
+
+<p>The following operations will require Admin privilege.</p>
+
+<ul>
+  <li>Create the folder <strong>C:\Program Files\mpv</strong></li>
+  <li>Unzip the downloaded files into the directory just created</li>
+  <li>As admin, run the script <strong>C:\Program Files\mpv\installer\mpv-install.bat</strong></li>
+</ul>
+
+<h3 id="optionally-install-espeak-ng">Optionally install eSpeak-NG</h3>
+<p>Install eSpeak-NG through the Windows App installer.</p>
+
+<h3 id="install-private-kodi-repository">Install Private Kodi Repository</h3>
+
+<p>In order to simplify the installation of the latest Kodi TTS builds, a private Addon
+Repository was created. <a href="https://feuerbacher.us/kodi_repository">Download the repository from</a>.</p>
+
+<p><strong>Note:</strong> The first time that Kodi TTS runs on Windows, a Dialog will request Administator
+privilege to set several permissions:</p>
+
+<ol>
+  <li>Permission to enable two simple powershell scripts to call the Voicing API.
+Only the current user will have the permission.</li>
+  <li>Permission to add variables to the User’s environment.</li>
+</ol>
+
+<p>Install the Kodi TTS addon as well as its dependents. Since this Alpha release
+is not available from the Kodi repository, you will have to manually download
+Kodi TTS and a dependent addon.</p>
+
+<p>Download the two addons (you will need the .zip files) from the links below:</p>
+
+<ul>
+  <li><a href="URL_LANGCODES_ZIP">script.module.langcodes</a></li>
+  <li><a href="URL_TTS_ZIP">service.kodi.tts</a></li>
+</ul>
+
+<p>To install, in Kodi, go to <strong>Settings -&gt; Add-ons -&gt; Add-on browser -&gt; Install from zip file</strong>.
+There will probably be a warning about installing from unofficial sites. Select to
+allow the installation. Install <strong>script.module.langcodes</strong> first. Choose the path
+where you downloaded each zip file above. After the installation of both is complete,
+Kodi TTS will start and basic configuration will begin:</p>
+
+<h3 id="kodi-tts-first-run">Kodi TTS First Run</h3>
+
+<p>When Kodi TTS runs for the first time it performs several setup tasks:</p>
+
+<ul>
+  <li>On Windows, several scripts are run to give permission for scripts to run and to update
+environment variables. A (non-voiced) dialog will prompt the user to allow Admin
+privilege for a powershell script.</li>
+  <li>Next, several windows will quickly flash by an dissapear</li>
+  <li>Kodi should begin voicing its progress. A notification will be read before each step, each
+taking about five seconds to read. The installation/modification of a basic keymap named
+service.kodi.tts.keyboard.xml will be announced.</li>
+  <li>Next, it will be announced that Hint Text is enabled.</li>
+  <li>Finally, TTS announces that the Configuration Dialog will be displayed.</li>
+</ul>
+
+<h3 id="configuration-dialog">Configuration Dialog</h3>
+
+<p>The Configuration Dialog is a custom Dialog where you can change TTS settings and hear the
+changes as they are made. You don’t have to change anything. You can press Escape and it
+will exit. However there is one setting in particular that you probably want to change is
+the speed of the voice.</p>
+
+<p>You will probably notice that the configuration Dialog is very chatty and helpful. This is
+because the first time you run it extra verbosity is enabled. Normally this is enabled/disabled
+by pressing a particular key on the keyboard, as determined by the keymap.</p>
+
+<h3 id="to-change-speed">To Change Speed</h3>
+
+<p>Move the down cursor until you are on the 5th Line. The label will be “Speed 1.2” (or similar).
+Use the right cursor (arrow) to increase the speed, or left to reduce the speed.</p>
+
+<h3 id="save-settings">Save Settings</h3>
+
+<p>In order to save the settings you have chosen, move the cursor down until it reaches the
+OK button. Selecting OK will save the settings and dismiss the dialog, returning you to
+where you were in Kodi.</p>
+
+<h3 id="to-make-other-changes">To Make Other Changes</h3>
+
+<p>Move the cursor to the line of your choice, such as <strong>Engine</strong> If you click on or press Enter
+a Selection Dialog will appear and you will be able to navigate up and down to learn and
+hear about the various options. If you press Escape, then no changes will be made to your
+Settings. If you select (click on or press Enter) something, then that choice will be
+remembered in the Settings Dialog. You can undo your action by going back to the Selection
+Dialog and making another choice. Or you can discard all of your changes by pressing Escape
+or the Cancel button to the right of the OK button.</p>
+
+<h3 id="linux-quick-start">Linux Quick Start</h3>
+
+<p>Linux, requires either espeak-NG or mpv player to be installed before
+anything is voiced. Since most people agree that the Google TTS (which requires mpv) is
+superior to eSpeak, installing mpv is a very good idea. By installing it before Kodi TTS is
+installed voicing will begin immediately on first-use.</p>
+
+<p>Mpv, espeak and mplayer are likely available from the ‘normal’ place for your Linux
+distribution. Kodi expects them to be installed in /usr/bin.</p>
+
+<p>After installing any players or engines, install the Kodi TTS addon as well as its
+dependents. Since this Alpha release is not available from the Kodi repository,
+you will have to manually download and install Kodi TTS and a dependent addon.</p>
+
+<p>Download the two addons (you will need the .zip file):</p>
+
+<ul>
+  <li><a href="URL_LANGCODES_ZIP_REPLACE">script.module.langcodes</a></li>
+  <li><a href="URL_TTS_ZIP_REPLACE">service.kodi.tts</a></li>
+</ul>
+
+<p>To install, in Kodi, go to <strong>Settings -&gt; Add-ons -&gt; Add-on browser -&gt; Install from zip file</strong>.
+There will probably be a warning about installing from unofficial sites. Select to
+allow the installation. Install <strong>script.module.langcodes</strong> first. Choose the path
+where you downloaded each zip file above. After the installation of both is complete,
+Kodi TTS will start and basic configuration will begin.</p>
+
+<h3 id="kodi-tts-first-run-1">Kodi TTS First Run</h3>
+
+<p>When Kodi TTS runs for the first time it performs several setup tasks:</p>
+
+<ul>
+  <li>On Windows, several scripts are run to give permission for scripts to run and to update
+environment variables. A (non-voiced) dialog will prompt the user to allow Admin
+privilege for a powershell script.</li>
+  <li>Next, on Windows, several windows will quickly flash by an dissapear</li>
+  <li>On Linux, no special scripts or permissions are needed.</li>
+  <li>Kodi should begin voicing its progress. A notification will be read before each step, each
+taking about five seconds to read. The installation/modification of a basic keymap named
+service.kodi.tts.keyboard.xml will be announced.</li>
+  <li>Next, it will be announced that Hint Text is enabled.</li>
+  <li>Finally, TTS announces that the Configuration Dialog will be displayed.</li>
+</ul>
+
+<h3 id="link-to-configuration-dialog"><a href="configuration-dialog" title="Configuration Dialog">Link to Configuration Dialog</a></h3>
+
+<h2 id="what-follows-is-additional-information-and-not-part-of-the-quick-start">What follows is additional information and not part of the Quick-Start</h2>
+
+<h3 id="keyboard-mappings">Keyboard mappings</h3>
+<p>Kodi provides a means to define and modify numerous shortcuts for keyboards,
+ir-remotes and other devices. Kodi TTS comes with a small set of shortcuts to
+help you get started.</p>
+
+<p>I made the mistake of ignoring the previous keymap assignments. This will be corrected
+before Beta is released. Suggestions for improving these assignments are welcome.</p>
+
+<p>Keyboard (and other input device) mappings are configured in .xml files in Kodi’s
+user_data/keymaps directory. The pre-configured one installed with Kodi is named
+“kodi.tts.keyboard.xml” It can be directly edited to change the key assignments.
+Currently, a keymap editor for this file is not available. (but will be before beta).</p>
+
+<p>What follows are the <strong>current</strong> default keyboard mapping definitions for all platforms:</p>
+
+<p>Function: Advance to next logging mode</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    keyboard shortcut F11
+    Cycles through severe, error, warning, debug and info
+</code></pre></div></div>
+
+<p>Function: dumps every python thread to the log</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    keyboard shortcut ctrl F11
+    Useful for debugging
+</code></pre></div></div>
+
+<p>Function: Open Settings</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    keyboard shortcut: Ctrl, F12
+    Launches the Kodi TTS configuration settings dialog
+</code></pre></div></div>
+
+<p>Function: STOP</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    keyboard shortcut: STOP
+    Causes currently voiced text to be skipped
+</code></pre></div></div>
+
+<p>Function: VOICE_HINT</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    keyboard shortcut: Alt-h
+    Voice hint toggles voicing hint text which is currently only embedded in
+    the kodi.tts configuration and help dialogs.
+</code></pre></div></div>
+
+<p>Function: REPEAT</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    keyboard shortcut: shift, F12
+
+    Repeat voicing the previous item, including complete context (Window name,
+    heading, etc. on down to the item itself).
+</code></pre></div></div>
+
+<p>Function EXTRA</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Increase verbosity (more context)
+
+    Shortcut not defined
+</code></pre></div></div>
+
+<p>Function ITEM_EXTRA</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Shortcut not defined
+</code></pre></div></div>
+
+<p>Function TOGGLE_ON_OFF</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    keyboard shortcut: F12
+    Starts/stops Kodi TTS
+</code></pre></div></div>
+
+<p>Function VOL_UP</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    keyboard shortcut: ctrl, shift + (control, shift, plus)
+    Changes the volume of the voiced text (not general volume)
+</code></pre></div></div>
+
+<p>Function VOL_DOWN</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    keyboard shortcut: ctrl - (control minus)
+    Changes the speed of Voiced Text
+</code></pre></div></div>
+
+<p>Function: SPEED_UP</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    keyboard shortcut: alt, shift +
+    Increases how fast the text is spoken
+    Note: At least on the Linux distribution and keyboard that I am
+    using, pressing (in order) "alt, shift, +" gets interpreted as
+    "meta +", however, pressing "shift, alt, +" is interpreted as
+    "shift, meta, 160". More study is required to find better shortcut.
+</code></pre></div></div>
+
+<p>Function: SLOW_DOWN</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    keyboard shortcut: alt -
+    Reduces how fast text is read
+</code></pre></div></div>
+
+<p>Function: Display Help Dialog</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    keyboard shortcut: ctrl F1
+    This will launch Kodi’s document reader where you can get more information
+    about how to use Kodi TTS.
+</code></pre></div></div>
+
+<h3 id="configuration">Configuration</h3>
+
+<p>Kodi TTS does NOT USE Kodi’s addon configuration menus. Instead, it uses custom configuration dialog and code. The reasons for this include:</p>
+
+<ul>
+  <li>Instant audio feedback for changes as they are made</li>
+  <li>Ability to revert changes</li>
+  <li>Dynamic UI that presents valid choices for the current configuration</li>
+  <li>Able to voice items that Kodi’s built-in configuration menus can not</li>
+  <li>Ability to voice hints, additional detail as well as help (not fully implemented)</li>
+</ul>
+
+<h3 id="configuration-dialog-1">Configuration Dialog</h3>
+
+<p>The Configuration Dialog is accessed by pressing <strong>Ctrl F12</strong>. The Dialog is roughly
+organized in the logical order that changes are made. By pressing <strong>Alt-h</strong>
+Kodi TTS will voice some terse hint information as you navigate through your choices.
+To disable the hints, press <strong>Alt-h</strong> again.</p>
+
+<h4 id="choose-engine">Choose Engine</h4>
+
+<p>The first thing to choose is the TTS Engine, which is the first dialog item. By pressing
+‘enter’ (or equivalent) a Selection Dialog is displayed that lists all of the available
+engines. By changing the focus you will hear each engine speak. Simply select the
+engine you want by pressing ‘enter’ (or equivalent). Note that the change won’t be made
+permanent until you save it when leaving the Configuration Dialog.</p>
+
+<h4 id="voice-speed">Voice speed</h4>
+
+<p>By now you may have noticed that the voicing speed has slowed down after you changed
+the engine. This is done to make sure the new engine is understandable. To fix the speed,
+navigate to the <strong>speed</strong> item. Here you use the left or right cursor to change the
+speed. It is recomended that the speed is changed after choosing the engine and
+language variant.</p>
+
+<h4 id="language-variant-voice">Language Variant (voice)</h4>
+
+<p>After engine selection, the next thing to choose is the ‘Language Variant’ or voice.
+Again, press enter to bring up the Selection Dialog where you can hear each choice.</p>
+
+<h4 id="player">Player</h4>
+
+<p>The default player depends on the engine. Generally mpv is preferred since it supports
+mp3 (smaller than wave) and ‘slave mode’ which improves performance, especially when
+used with a cache.</p>
+
+<p>Another choice, for engines that support it, is built-in player. A
+built-in player is part of the engine, so a separate player does not need to be
+installed. The biggest downside is that it is much slower than using a cache.</p>
+
+<p>Similar to using a built-in player is the SFX player. SFX uses Kodi to play the audio.
+The advantage being that SFX is always there. However, there are limitations:</p>
+<ul>
+  <li>You can not change speed or volume (without changing Kodi volume)</li>
+  <li>It only works with wave files, requiring a transcoder (slowing things down)</li>
+  <li>Wave files are larger than mpg</li>
+</ul>
+
+<h4 id="caching">Caching</h4>
+
+<p>Note that you can’t configure to use a cache if the current engine or player does
+not support it.</p>
+
+<p>Since the process of voice generation is expensive, Caching can greatly speed up
+voicing. Currently, there are no limits on cache size, nor is there garbage collection.
+For an engine that produces mp3 a cache for a typical library can grow to 1G or more.
+Wave files are larger. If you have the space, then a cache is recommended.</p>
+
+<p>A different cache is used for each engine and voice (language variant). Therefore if
+you have been using a cache for a few weeks and switched to a new voice, it may be
+worth deleting the old cache.</p>
+
+<p>Caches are located within the addon_data directory, by default is:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* Windows: c:\Users\&lt;user-id&gt;\AppData\Roaming\Kodi\userdata\addon_data
+* Linux: /user/home/&lt;user_id&gt;/.kodi/userdata/addon_data
+</code></pre></div></div>
+
+<p>From there, the cache is located in:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* Windows: service.kodi.tts\cache\&lt;engine_id&gt;\&lt;language_id&gt;\&lt;country_id&gt;\&lt;voice_id&gt;\
+* Linux: service.kodi.tts/cache/&lt;engine_id&gt;/&lt;language_id&gt;/&lt;country_id&gt;/&lt;voice_id&gt;
+</code></pre></div></div>
+
+<p>For example a cache for google, in english, united states, voice: en-us the cache is
+in: /user/home/<user_id>/.kodi/userdata/addon_data/service.kodi.tts/cache/goo/en/us/en-us</user_id></p>
+
+<p>For other engines the id’s can be completely different.</p>
+
+<h4 id="player-mode">Player Mode</h4>
+
+<p>The choice of player modes depends upon the engine and player.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* SLAVE mode allows a player to run in slave-mode, which is best for caching,
+  but should also improve performance in non-cache environments
+
+* FILE mode tells the player to get the audio from a file
+
+* PIPE mode is meant to improve performance by transmitting the audio via
+  in-memory 'pipes' instead of through a file. However, it is currently
+  implemented by going through a file anyway. The option remains because it
+  may be useful in the future.
+
+* ENGINE_SPEAK mode uses the engine's built-in player (if supported).
+</code></pre></div></div>
+
+<h4 id="volume">Volume</h4>
+
+<p>Volume is always measured in decibels, with 0.0dB being ‘normal’ volume. An attempt
+is made to have a volume of 0.0dB about the same across the different engines and players,
+however, not a great deal of effort has been put into this, so far.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">fbacher&#39;s Kodi Development Repo</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">fbacher&#39;s Kodi Development Repo</li><li><a class="u-email" href="mailto:frank@feuerbacher.us">frank@feuerbacher.us</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/fbacher"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">fbacher</span></a></li><li><a href="https://www.twitter.com/---"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">---</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Private Kodi addon repository to simplify the installation and update of addons I am developing as well as some dependencies. Systems using the repository will be aware of changes made to the repository, such as updates.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
