@@ -1,5 +1,5 @@
 ---
-layout: redirect
-redirect_url: {{ site.url }}
+layout: page
+redirect_url: URL_PREFIX
 ---
 Dummy Text

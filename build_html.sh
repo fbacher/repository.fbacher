@@ -1,18 +1,25 @@
 #!/usr/bin/sh
 set -x
-#SITE='feuerbacher'
-# SITE='github'
-SITE='smeagol'
+SITE='feuerbacher'
+#SITE='github'
+#SITE='smeagol'
 
 awk -v SITE="${SITE}" -f addon.awk repo/repo.fbacher/addon_proto.xml  >repo/repo.fbacher/addon.xml
 awk -v SITE="${SITE}" -f addon.awk repo/service.kodi.tts/SETUP.mdp  >repo/service.kodi.tts/SETUP.md
+awk -v SITE="${SITE}" -f addon.awk repo/service.kodi.tts/CONFIG_DIALOG.mdp  >repo/service.kodi.tts/CONFIG_DIALOG.md
+
 awk -v SITE="${SITE}" -f addon.awk repo/script.module.langcodes/README.mdp  >repo/script.module.langcodes/README.md
 awk -v SITE="${SITE}" -f addon.awk INSTALL_WINDOWS.mdp >INSTALL_WINDOWS.md
 awk -v SITE="${SITE}" -f addon.awk INSTALL_LINUX.mdp >INSTALL_LINUX.md
+awk -v SITE="${SITE}" -f addon.awk INSTALL_WINDOWS_PROG.mdp > INSTALL_WINDOWS_PROG.md
+awk -v SITE="${SITE}" -f addon.awk INSTALL_LINUX_PROG.mdp > INSTALL_LINUX_PROG.md
+awk -v SITE="${SITE}" -f addon.awk index.mdp >index.md
 awk -v SITE="${SITE}" -f addon.awk README.mdp >README.md
+awk -v SITE="${SITE}" -f addon.awk KEYBOARD_SHORTCUTS.mdp >KEYBOARD_SHORTCUTS.md
+awk -v SITE="${SITE}" -f addon.awk KEYMAP_TOOL.mdp >KEYMAP_TOOL.md
 
-
-
+mkdir -p repo/repo.fbacher
+mkdir -p repo/zips
 cd repo/repo.fbacher
 cd -
 cd repo/zips

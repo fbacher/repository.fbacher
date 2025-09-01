@@ -1,0 +1,32 @@
+
+
+
+### To Change Speed
+
+Move the down cursor until you are on the 5th Line. The label will be "Speed 1.2" (or similar).
+Use the right cursor (arrow) to increase the speed, or left to reduce the speed.
+---
+layout: page
+title: Configuration Dialog
+---
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+
+Below are descriptions of some of the configurable items. 
+
+## Overview
+
+### Save Settings
+
+In order to save the settings you have chosen, move the cursor down until it reaches the
+OK button. Selecting OK will save the settings and dismiss the dialog, returning you to
+where you were in Kodi.
+
+### To Make Other Changes
+
+Move the cursor to the line of your choice, such as **Engine** If you click on or press Enter
+a Selection Dialog will appear and you will be able to navigate up and down to learn and
+hear about the various options. If you press Escape, then no changes will be made to your
+Settings. If you select (click on or press Enter) something, then that choice will be
+remembered in the Settings Dialog. You can undo your action by going back to the Selection
+Dialog and making another choice. Or you can discard all of your changes by pressing Escape
+or the Cancel button to the right of the OK button.

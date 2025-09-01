@@ -1,5 +1,6 @@
 ---
-layout: home
+layout: page
+title: README_INSTALL
 ---
 <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
 
@@ -16,7 +17,7 @@ using unauthorized repositories.
 ### To Use the Repository
 
 First download the TTS Repository addon's .zip file
-[from here](URL_ZIPS-/repo.fbacher/repo.fbacherREPO_ZIP_VERSION)
+[repo zip](URL_REPO_ZIP)
 
 Next, install the repository as you would any Kodi Addon:
 
@@ -34,6 +35,6 @@ installed.
 If you prefer not to use the TTS Repository, you can download and install the two addons
 **LangCodes** and **Kodi TTS** (in that order) from the zip files:
 
-  * [LangCodes](URL_ZIPS-LANGCODES_ZIP-LANGCODES_ZIP_VERSION)
+  * [LangCodes](URL_LANGCODES_ZIP)
 
-  * [Kodi TTS](URL_ZIPS-TTS_ZIP-TTS_ZIP_VERSION)
+  * [Kodi TTS](URL_TTS_ZIP)
