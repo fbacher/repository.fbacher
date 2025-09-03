@@ -7,7 +7,7 @@ title: Keyboard Shortcuts
 In addition to the standard kodi keyboard, remote and other commands, there are a few
 Keyboard Shortcuts specific to Kodi TTS. These shortcuts are defined using keymappings
 so that the user can change them at will. Below the default keyboard shortcuts
-are used. To modify refer to: [KeyMap](https://feuerbacher.us/repo/KEYMAP_TOOL.html).
+are used. To modify refer to: [KeyMap](http://smeagol/repo/KEYMAP_TOOL.html).
 
 ### Keyboard mappings
 Kodi provides a means to define and modify numerous shortcuts for keyboards,

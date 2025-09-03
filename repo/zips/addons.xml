@@ -4,10 +4,10 @@
       <dir minversion="20.0.0">
          
          
-         <info compressed="false">https://feuerbacher.us/repo/repo/zips/addons.xml.gz</info>
+         <info compressed="false">http://smeagol/repo/repo/zips/addons.xml.gz</info>
          
-         <checksum verify="md5">https://feuerbacher.us/repo/repo/zips/addons.xml.gz.md5</checksum>
-         <datadir zip="true">https://feuerbacher.us/repo/repo/zips/</datadir>
+         <checksum verify="md5">http://smeagol/repo/repo/zips/addons.xml.gz.md5</checksum>
+         <datadir zip="true">http://smeagol/repo/repo/zips/</datadir>
          <hashes>sha256</hashes>  
       </dir>
       

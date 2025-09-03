@@ -1,40 +1,48 @@
 ---
 layout: page
-title: README_INSTALL
+title: Installing Kodi TTS
 ---
 <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
 
-    * You can either install the repository as an Kodi addon
-    OR
-    * You can download and install the individual zip files required by TTS.
+NOTE: At this time Kodi TTS is ONLY available on Windows and Linux. Once this release
+is complete, it will be a priority to add more platforms.
 
-The advantage of installing the repository addon is that you won't have to repeat coming to this
-site to download then install the .zip files
+This site provides a private Kodi addon repository that simplifies installation
+and update of the Kodi TTS addon which is currently in Alpha. By installing this
+repository addon you will be able to easily install Kodi TTS and any dependencies.
 
-The advantage of not using the repository addon is that some people don't like
-using unauthorized repositories.
+If for some reason you do not wish to use this repository, you can manually download
+Kodi TTS. There are extra steps and you won't get notifications about updates. For more
+information [see Manual Installation](MANUAL_INSTALLATION).
 
-### To Use the Repository
+Although not required, it is suggested that you install the **mpv** player first. You need
+it on Linux, but is optional on Windows if you use the Navigator's voice engine. However,
+without mpv you won't be able to try out Google TTS voices. Also, mpv is more responsive
+than the built-in player.
 
-First download the TTS Repository addon's .zip file
-[repo zip](URL_REPO_ZIP)
+If you think that you will want to use eSpeak, go ahead and install that now as well, so 
+that it can be used as soon as you install Kodi TTS.
 
-Next, install the repository as you would any Kodi Addon:
+If you choose not to install mpv or eSpeak, you can install them later.
 
-In Kodi, go to **Settings -> Add-ons -> Add-on browser -> Install from zip file**.
-There will probably be a warning about installing from unofficial sites. Select to
-allow the installation. Select the .zip file that you downloaded from the previous step.
-After installation, the repository **fbacher.develop** should show up in Kodi's
-**Install from repository** dialog.
+## Install Optional Programs
 
-Finally, install the **Kodi Screen Reader** addon from that repository. Dependent addons will be automatically
-installed.
+Although optional, it is suggested that you install mpv and perhaps eSpeak-NG.
 
-### Installing Without the Repository
+To install **mpv** or **eSpeak-NG**
+Choose your platform:
+  * [Install on Windows](INSTALL_WIN_PROG) 
+  * [Install on Linux](INSTALL_LINX_PROG) 
 
-If you prefer not to use the TTS Repository, you can download and install the two addons
-**LangCodes** and **Kodi TTS** (in that order) from the zip files:
+## Install Kodi addons
 
-  * [LangCodes](URL_LANGCODES_ZIP)
+You will next install a Kodi Repository addon. This is needed since the TTS addon is still
+in development and not available in the official Kodi Repository. After this private 
+repository is installed you will be able to use it to install the latest available TTS 
+addon as well as updates in the future.
 
-  * [Kodi TTS](URL_TTS_ZIP)
+## To begin the installation
+
+Choose your platform:
+  * [Install on Windows](INSTALL_WINDOWS) 
+  * [Install on Linux](INSTALL_LINUX)

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Release Notes
+title: Kodi TTS Release Notes
 ---
 <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
 
@@ -114,7 +114,7 @@ Kodi TTS depends upon several libraries which are incorporated with TTS:
 
 ### Installation
 
-See SETUP.md for installation and configuration.
+See [README_INSTALL](URL_README_INSTALL) for installation and configuration.
 
   [1]: https://github.com/savoirfairelinux/num2words
   [2]: https://github.com/pndurette/gTTs

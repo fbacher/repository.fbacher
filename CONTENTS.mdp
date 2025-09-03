@@ -1,0 +1,28 @@
+---
+layout: page
+title: Kodi TTS Table of Contents
+---
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+
+* ReadMes 
+* [Kodi TTS ReadMe](KODI_TTS_README)
+* [Langcodes ReadMe](LANGCODES_README)
+* [Release Notes](RELEASE_NOTES)
+* [Installation](URL_README_INSTALL)
+* [Manual Installation](MANUAL_INSTALLATION)
+* [Installation through Addon Repository](URL_README_INSTALL)
+* Optional Programs 
+  * [Windows](INSTALL_WIN_PROG)
+  * [Linux](INSTALL_LINX_PROG)
+* TTS Addon Installation
+  * [Windows](INSTALL_WINDOWS)
+  * [Linux](INSTALL_LINUX)
+* [Configuration Dialog](CONFIG_DIALOG)
+* [Keyboard Shortcuts](KEYBOARD_SHORTCUTS)
+* [KeyMap Tool](KEYMAP_TOOL)
+* Licenses
+  * [Kodi TTS](KODI_TTS_LICENSE)
+  * [Langcodes](LANGCODES_LICENSE)
+* About LangCodes Addon
+* [About the Addon Repository](REPO_README)
+* [Building and Deploying the Repository](README_BUILD)

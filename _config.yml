@@ -18,19 +18,21 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+#  ignore_theme_config: true
 title: Kodi TTS Addon
 email: frank@feuerbacher.us
 author:
-  - name: "Frank Feuerbacher"
-  - email: frank@feuerbacher.us
+  name: "Frank Feuerbacher"
+  email: frank@feuerbacher.us
 description: >- # this means to ignore newlines until "baseurl:"
   This site provides a private Kodi addon repository in order to simplify the installation
   and update of the Kodi TTS addon which is currently in Alpha. By installing this
   repository addon you will be able to easily install Kodi TTS and any dependencies.
 baseurl: "/repo" # the subpath of your site, e.g. /blog
-url: "https://feuerbacher.us" # the base hostname & protocol for your site, e.g. https://example.com
-twitter_username: ""
-github_username:  fbacher
+# url: "https://feuerbacher.us" # the base hostname & protocol for your site, e.g. https://example.com
+url: "http://smeagol" # the base hostname & protocol for your site, e.g. https://example.com
+twitter_username: nil
+github_username: fbacher
 
 # Build settings
 theme: minima
@@ -39,8 +41,10 @@ plugins:
   - jekyll-remote-theme
 minima:
   skin: dark
+  date_format: "%Y-%m-%d %H:%M"
   hide_site_feed_link: true
-  social_links: []
+  # social_links:
+  #   github: github-moron
    # - title: Kodi TTS repository at GitHub
    #   icon: github
    #   url: "https://github.com/fbacher"
@@ -49,7 +53,7 @@ minima:
    #   url: ""
 
 remote_theme: "jekyll/minima@1e8a445"
-header_pages: [ "INSTALL_LINUX" ]
+header_pages: nil  # [ "INSTALL_LINUX" ]
 
 # Exclude from processing.
 # The following items will not be processed, by default.
