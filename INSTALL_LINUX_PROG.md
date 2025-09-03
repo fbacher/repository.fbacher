@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Install Optional Programs
+title: Install Optional Linux Programs
 ---
 <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
 

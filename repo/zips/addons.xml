@@ -22,7 +22,7 @@
          
       </assets>
    </extension>
-</addon><addon id="service.kodi.tts" name="Kodi Screen Reader" version="2.0.7~alpha" provider-name="Frank Feuerbacher (fbacher), Rick Phillips (ruuk), pvagner">
+</addon><addon id="service.kodi.tts" name="Kodi Screen Reader" version="2.0.3~alpha8" provider-name="Frank Feuerbacher (fbacher), Rick Phillips (ruuk), pvagner">
    <debugging>true</debugging>
    <requires>
       <import addon="xbmc.python" version="3.0.1" />
@@ -36,7 +36,7 @@
    <extension point="xbmc.service" library="resources/lib/service.py" start="login" />
 
    <extension point="xbmc.addon.metadata">
-      <news>Seventh alpha with repo-site 2.0.7~alpha</news>
+      <news>Eigth alpha 2.0.3~alpha8</news>
       <assets>
          <icon>icon.png</icon>
       </assets>

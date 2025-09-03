@@ -29,8 +29,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   and update of the Kodi TTS addon which is currently in Alpha. By installing this
   repository addon you will be able to easily install Kodi TTS and any dependencies.
 baseurl: "/repo" # the subpath of your site, e.g. /blog
-# url: "https://feuerbacher.us" # the base hostname & protocol for your site, e.g. https://example.com
-url: "http://smeagol" # the base hostname & protocol for your site, e.g. https://example.com
+url: "https://feuerbacher.us" # the base hostname & protocol for your site, e.g. https://example.com
+# url: "http://smeagol" # the base hostname & protocol for your site, e.g. https://example.com
 twitter_username: nil
 github_username: fbacher
 

@@ -14,7 +14,7 @@ title: Install Kodi TTS on Windows
 Installing a private Addon Repository simplifies installing Kodi TTS and its dependents.
 You only need to install the Repository Addon once. It will inform you of any updates.
 
-  * To install the repository, first [Download the repository addon .zip file](http://smeagol/repo/repo/zips/repo.fbacher/repo.fbacher-1.0.0.zip).
+  * To install the repository, first [Download the repository addon .zip file](https://feuerbacher.us/repo/repo/zips/repo.fbacher/repo.fbacher-1.0.0.zip).
   * Next, from Kodi, in Kodi, go to **Settings -> Add-ons -> Add-on browser -> Install from zip file**.
   * You may get a warning about installing software from strangers. Follow the instructions to
     enable installing addons from a .zip file.
@@ -54,8 +54,8 @@ When Kodi TTS runs for the first time it performs several setup tasks:
 
 ### Configuration Dialog
 
-[Link to Configuration Dialog](http://smeagol/repo/CONFIG_DIALOG.html)
+[Link to Configuration Dialog](https://feuerbacher.us/repo/CONFIG_DIALOG.html)
 
 ### Keyboard Shortcuts
 
-[Link to Keyboard Shortcuts](http://smeagol/repo/KEYBOARD_SHORTCUTS.html)
+[Link to Keyboard Shortcuts](https://feuerbacher.us/repo/KEYBOARD_SHORTCUTS.html)

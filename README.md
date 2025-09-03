@@ -8,4 +8,4 @@ This project (repository.fbacher) creates an un-official Kodi Addon Repository t
 to simplify the installation and update of Kodi TTS (service.kodi.tts) while it is
 under development and not in the Official Kodi Repository. 
 
-See [build readme](http://smeagol/repo/README_BUILD.html) for more information
+See [build readme](https://feuerbacher.us/repo/README_BUILD.html) for more information

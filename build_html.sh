@@ -10,9 +10,9 @@
 
 current_dir=`pwd`
 set -x
-# SITE='feuerbacher'
+SITE='feuerbacher'
 #SITE='github'
-SITE='smeagol'
+# SITE='smeagol'
 # SITE="localhost"
 
 mkdir -p repo/repo.fbacher
@@ -47,3 +47,12 @@ awk -v SITE="${SITE}" -f addon.awk README_FIRST.mdp >README_FIRST.md
 cp README_FIRST.md index.md
 awk -v SITE="${SITE}" -f addon.awk KEYBOARD_SHORTCUTS.mdp >KEYBOARD_SHORTCUTS.md
 awk -v SITE="${SITE}" -f addon.awk KEYMAP_TOOL.mdp >KEYMAP_TOOL.md
+
+for p in _post_proto/*
+ do
+   base_name=`basename "${p}" .mdp`
+   echo base_name: {base_name}
+   echo  addon.awk "${base_name}.mdp" _posts/"${base_name}.md"
+
+   awk -v SITE="${SITE}" -f addon.awk "_post_proto/${base_name}.mdp" >_posts/"${base_name}.md"
+done

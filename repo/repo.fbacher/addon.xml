@@ -6,13 +6,13 @@
          <!-- DO NOT add extra whitespace to the element or attribute values. -->
          <!-- The only valid hash-values are: md5, sha256, sha512, sha1 (also true and false). Invalid
               values cause Kodi to core dump. -->
-         <info compressed="false">http://smeagol/repo/repo/zips/addons.xml.gz</info>
+         <info compressed="false">https://feuerbacher.us/repo/repo/zips/addons.xml.gz</info>
          <!-- Without the verify attribute, no validation of the hash is made.
               Also, the hash is performed on the addons.xml.gz file. You can put the hash
               in the following line in either addons.xml.gz.md5 or addons.xml.md5. The file name
               is not paid much attention to (not tested).-->
-         <checksum verify="md5">http://smeagol/repo/repo/zips/addons.xml.gz.md5</checksum>
-         <datadir zip="true">http://smeagol/repo/repo/zips/</datadir>
+         <checksum verify="md5">https://feuerbacher.us/repo/repo/zips/addons.xml.gz.md5</checksum>
+         <datadir zip="true">https://feuerbacher.us/repo/repo/zips/</datadir>
          <hashes>sha256</hashes>  <!-- Hash code to use for the datadir -->
       </dir>
       <!-- <dir>
